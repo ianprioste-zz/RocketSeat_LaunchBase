@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --margin--:10px 25% 10px 25%;
+}
+
+* {
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+
+.container{
+    margin: var(--margin--);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .menu{
+    margin-left: 100px;
+    font-size: 16px;
+    word-spacing: 20px;
+}
+
+.content {
+    margin-top: 3%;
+}
+
+.content .content-header {
+    background-color:#FBDFDB ;
+    border-radius: 30px;
+
+    width: 940px;
+    height: 366px;
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.content .content-header .text-box {
+    margin-top: 14%;
+    margin-left: 6%;
+
+    padding-right: 30%;
+}
+
+.content .content-header .text-box h1{
+    font-weight: bold;
+}
+
+.content .content-header .text-box h2{
+    margin-top: 5%;
+    font-size: 18px;
+    opacity: 70%;
+}
+
+.content .content-header img {
+    width: 216px;
+    height: 300px;
+
+    margin-top: 6%;
+    margin-right: 7%;
+}
+
+.content .mostAccessed{
+    margin: 4.5% 0;
+    font-size: 24px;
+
+    max-width: 800px;
+}
+
+.content .mostAccessed .cards{
+  margin-top: 2%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2%;
+}
+.content .mostAccessed .cards .card img{
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.content .mostAccessed .cards .card h4 {
+    padding-top: 2%;
+    font-size: 18px;
+}
+.content .mostAccessed .cards .card p {
+    padding-top:0.5%;
+    font-size: 14px;
+    color: #777777;
+}
+
+footer{
+    background-color: #eeeeee;
+    text-align: center;
+}
+
+footer p{
+    padding: 20px;
+    font-size: 14px;
+    color: #999999;
+}
+
