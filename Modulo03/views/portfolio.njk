@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.njk" %}
 
 {% block head %}
     <title>Portfolio - Ian Prioste</title>
@@ -15,85 +15,25 @@
 
         <section class="cards">
 
-            <div class="card" id="GykTLqODQuU">
-                <div class="card__image-container">
-                    <img src="https://i.ytimg.com/vi/GykTLqODQuU/maxresdefault.jpg" alt="Video Aula">
+            {% for item in items %}
+            <div class="card" id="{{item.id}}">
+                <div class="card__image-container {{ 'featured-wrapper' if item.featured}}">
+                    <img src="https://i.ytimg.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
+                    {% if item.featured %}
+                        <div class="featured">
+                            featured
+                        </div>
+                    {% endif %}                
                 </div>
                 <div class="card__content">
-                    <p>Formulário Animado com JS puro e CSS Animation | Mayk Brito</p>
+                    <p>{{item.title}}</p>
                 </div>
                 <div class="card__info">
-                    <p>57 min</p>
-                    <p class="card__price">Free</p>
+                    <p>{{item.duration}}</p>
+                    <p class="card__price">{{item.price}}</p>
                 </div>
             </div>
-
-            <div class="card" id="Q7gT462aBU0">
-                <div class="card__image-container">
-                    <img src="https://i.ytimg.com/vi/Q7gT462aBU0/maxresdefault.jpg" alt="Video Aula">
-                </div>
-                <div class="card__content">
-                    <p>Recriando Pipefy do zero | Diego Fernandes</p>
-                </div>
-                <div class="card__info">
-                    <p>57 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-            
-            <div class="card" id="sYe4r8WXGQg">
-                <div class="card__image-container">
-                    <img src="https://i.ytimg.com/vi/sYe4r8WXGQg/maxresdefault.jpg" alt="Video Aula">
-                </div>
-                <div class="card__content">
-                    <p>Controlando autenticação em rotas no ReactJS | Diego Fernandes</p>
-                </div>
-                <div class="card__info">
-                    <p>57 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
-            <div class="card" id="ESIQ6gWV80Y">
-                <div class="card__image-container">
-                    <img src="https://i.ytimg.com/vi/ESIQ6gWV80Y/maxresdefault.jpg" alt="Video Aula">
-                </div>
-                <div class="card__content">
-                    <p>CRUD e relacionamentos no Adonis JS| Diego Fernandes</p>
-                </div>
-                <div class="card__info">
-                    <p>57 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
-            <div class="card" id="XcU9GEUZTQA">
-                <div class="card__image-container">
-                    <img src="https://i.ytimg.com/vi/XcU9GEUZTQA/maxresdefault.jpg" alt="Video Aula">
-                </div>
-                <div class="card__content">
-                    <p>Iniciando com React Native | Diego Fernandes</p>
-                </div>
-                <div class="card__info">
-                    <p>57 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
-            <div class="card" id="1*pAyx-BiH-xNrzfVPC6CXEA">
-                <div class="card__image-container">
-                    <img src="https://miro.medium.com/max/3840/1*pAyx-BiH-xNrzfVPC6CXEA.png" alt="Video Aula">
-                </div>
-                <div class="card__content">
-                    <p>Fazendo requisições no ReactJS + API V3 do Youtube | Mayk Brito</p>
-                </div>
-                <div class="card__info">
-                    <p>57 min</p>
-                    <p class="card__price">Free</p>
-                </div>
-            </div>
-
-
+            {% endfor %}
         </section>
 
         <div class="modal-overlay">
