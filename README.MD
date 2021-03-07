@@ -14,7 +14,6 @@ Hora de Término: 18h
 - [x]  07'13" Operadores relacionais e comparativos
 - [x]  08'01" Operadores lógicos e aritméticos
 - [x]  20'00" Desafio 1-1
-- [ ]  05'00" Atualizar repositório
 
 # O que aprendi?
 
