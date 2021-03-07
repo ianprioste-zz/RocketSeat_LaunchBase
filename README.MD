@@ -61,9 +61,9 @@ node index.js
 ## Comentários, Strings e Numbers
 
 ```jsx
-**Criar um programa que calcula a média
+// Criar um programa que calcula a média
 // das notas entre os alunos e envia
-// mensagem do cálculo da média**
+// mensagem do cálculo da média
 
 const aluno01 = 'Ian'
 const aluno02 = 'Diego'
