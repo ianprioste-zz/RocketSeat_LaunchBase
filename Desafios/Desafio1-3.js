@@ -1,15 +1,3 @@
-/* Desafios para fortalecer alguns conceitos, entre eles:
-
-Funções e métodos;
-Estruturas de repetição;
-Escopos.
-
-
-Usuários e tecnologias
-
-Crie um programa que armazena um array de usuários (objetos), cada usuário tem um nome e suas tecnologias (novo array):
-*/
-
 const programadores = [
     {nome:"Ian",tecnologias:["HTML","CSS","JavaScript"]},
     {nome:"Jasmine",tecnologias:["JavaScript","CSS"]},
@@ -22,14 +10,6 @@ function imprimirProgramadores (programadores){
     }
 }
 
-// imprimirProgramadores(programadores)
-
-/* Busca por tecnologia
-Baseado no desafio anterior, utilize a mesma lista de usuários construída.
-
-Crie uma função que recebe os dados de um objeto de usuário e retorna SE o usuário trabalha com CSS ou não. 
-Essa função deve retornar um boolean true/false.
-*/
 
 function buscarCSS (programador){
     for (let i=0;i<programador.tecnologias.length;i++){
@@ -39,9 +19,6 @@ function buscarCSS (programador){
     }
     return false
 }
-
-//Percorra o array de usuários e, para cada um, verifique se o mesmo 
-//trabalha com CSS utilizando a função construída acima, se SIM, imprima em tela as informações do usuário:
 
 function buscarProgramadorCSS (programador){
 
@@ -53,11 +30,6 @@ function buscarProgramadorCSS (programador){
     }
     
 }
-
-/*
-Soma de despesas e receitas
-Crie um programa que calcula a soma de receitas e despesas de usuários e no fim retorna o saldo (receitas - despesas).
-*/
 
 const usuarios = [
     {
@@ -77,23 +49,6 @@ const usuarios = [
     }
   ];
 
-  // Percorra o array de usuários e para cada usuário chame uma função chamada 
-  // calculaSaldo que recebe como parâmetro as receitas e despesas do usuário:
-
-/*function calculaSaldo(receitas, despesas){
-    let positivo = 0
-    let negativo = 0
-    for (let i=0;i<receitas.length;i++){
-        positivo = positivo + receitas[i]
-    }
-    for (let j=0;j<despesas.length;j++){
-        negativo = negativo + despesas[j]
-    }
-
-    return positivo-negativo
-}
-*/
-
 function saldo (usuarios){
     let saldo = 0
     for (usuario of usuarios) {
@@ -105,9 +60,6 @@ function saldo (usuarios){
         }
     }
 }
-
-// Crie uma segunda função que recebe como parâmetro um array de números e retorna a soma deles 
-// e use-a para calcular a soma de receitas e despesas dentro da função calculaSaldo:
 
 function somaNumeros (numeros){
     let soma = 0
