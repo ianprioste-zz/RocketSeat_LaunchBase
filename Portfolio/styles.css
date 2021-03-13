@@ -2,6 +2,7 @@
 
 :root {
     --color-green: #50fa7b;
+    --color-rocket: #7159c1;
 }
 
 *{
@@ -76,4 +77,90 @@ header{
 
 #links-footer a{
     border-bottom: 1px solid var(--color-green);
+}
+
+
+/* ======= CARDS =======*/
+
+.cards{
+    max-width: 800px;
+    margin: 0 auto; /*alinha ao meio*/
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; /*Espaços entre os elementos*/
+
+}
+
+.card{
+    background-color: var(--color-rocket) ;
+}
+
+.card_image-container img {
+    width: 100%;
+}
+
+.card_content,
+.card_info {
+    padding: 24px;
+}
+
+.card_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas em frações para ter tamanho flexível*/
+}
+
+.card_price{
+    background-color: var(--color-rocket);
+    filter: brightness(90%); /*Filtro na cor do background*/
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+/* ======= MODAL =======*/
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed; /*fixar a posição*/
+    top: 0;
+
+    visibility: hidden;
+
+}
+
+.modal{
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto; /*vh = visão da altura*/
+
+    position: relative; /*Faz o absoluto do filho respeitar este pai*/
+
+}
+
+.modal .close-modal{
+    color: black;
+    position: absolute; /*Posicionamento absoluto na tela toda*/
+    right: 8px;
+    top: 8px;
+    cursor: pointer; /*Fazer o cursor virar mãozinha*/
+
+}
+
+
+/* ======= MODAL ATIVO =======*/
+
+.modal-overlay.active{
+    visibility: visible;
+}
+
+iframe{
+    width: 100%;
+    height: 90%;
+    position: absolute; /*Preencher todo o espaço*/
+    top: 5%;
 }
