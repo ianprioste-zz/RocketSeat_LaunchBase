@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+:root {
+    --color-main-blue-900: #091133;
+    --color-main-blue-800: #111B47;
+    --color-main-blue-500: #505F98;
+    --color-main-blue-100: #E7ECFF;
+    --color-main-gray-600: #76848C;
+    --color-main-gray-800: #393E41;
+    --color-secundary-white: #FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html{
+
+    font-family: 'Roboto', sans-serif;
+
+    margin: 10px;
+
+    background: url('assets/designer.svg') no-repeat bottom right fixed;
+    background-size: 70%;
+    background-position-x: 150%;
+    background-position-y: 50%;
+
+}
+header{
+    padding: 30px;
+
+    display: flex;
+    place-content:space-between;
+    align-items: center;
+}
+
+.menu{
+    width: 33%;
+    min-width: 400px;
+}
+
+.menu a{
+    color: var(--color-main-blue-500);
+    font-size: 14px;
+    font-weight: 24px;
+    margin:30px;
+
+    text-decoration: none;
+}
+
+header div a:hover{
+    color:var(--color-main-blue-900);
+    transition: 200ms;
+}
+
+.logo{
+    width: 33%;
+    text-align: center;
+}
+
+.redes-sociais{
+    width: 33%;
+    min-width: 200px;
+
+    text-align: right;
+}
+
+.redes-sociais img{
+    height: 30px;
+    margin-left: 10px;
+}
+
+body #wrapper{
+    height: 100%;
+    max-width: 539.37px;
+    margin: 58px;
+}
+
+#wrapper h1{
+    font-weight:500;
+    font-size: 50px;
+    color: #091133;
+    margin-bottom: 20px;
+}
+
+#wrapper p{
+    font-weight:400;
+    color: var(--color-main-blue-500);
+
+}
+
+#wrapper #list{
+    margin-top: 15px;
+    color: var(--color-main-gray-800);
+}
+
+.button{
+    height: 36px;
+    width: 189px;
+
+    background-color: var(--color-main-blue-900);
+    margin: 69px 15px ;
+
+    color: var(--color-secundary-white);
+    font-size: 16px;
+
+    border-radius: 5px;
+
+}
+
+#button1:hover{
+    background-color: var(--color-main-blue-500);
+    transition: 200ms;
+
+}
+
+#button2{
+    color: var(--color-main-blue-900);
+    border: solid 1px var(--color-main-blue-900);
+
+
+
+    background-color: white;
+    
+}

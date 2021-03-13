@@ -5,55 +5,32 @@
 
         <title>Ian</title>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap" rel="stylesheet">   
-
-        <style>
-            *{
-                margin: 0;
-                padding: 0;
-                border: 0;
-            }
-            body{
-                background: #282a36; /*colorir fundo*/
-                color: white; /*colorir texto*/
-                font-family: 'Source Sans Pro', sans-serif;
-            }    
-
-            header{
-                padding: 32px;
-                border-bottom: 1px solid #333;
-                background: rgba(0, 0, 0, 0.274);
-            }
-
-            header div /*selecionar div dentro de header*/ {
-                text-align: center;
-            }
-            header div a{
-                color:white;
-                font-size: 18px; /*tamanho do texto, por padrão usa px*/
-                line-height: 28px; /*altura do texto (conselho usar 10 a mais que o font size)*/
-                margin: 0 16px; 
-                text-decoration: none; /*Remover underline*/
-            }
-
-            header div a:hover{
-                color: #50fafb;
-                transition: color 200ms;
-            }
-
-        </style>
+        <link rel="stylesheet" href="styles.css">
 
     </head>
 
     <body> 
         <header> <!--Parte inicial da página-->
-            <div class="menu"> <!--Caixinha que agrupa elementos-->
+            <div class="links"> <!--Caixinha que agrupa elementos-->
                 <a href="/">Sobre</a>
                 <a href="/">Aulas</a>        
             </div>
 
         </header>
+
+        <div id="wrapper">
+            <img src="https://avatars.githubusercontent.com/u/47223654?s=400&u=4869f854557563262fa63fd8da621d1a9ce7e92e&v=4" alt=""> <!--Esta tag não fecha-->
+            <h1>Ian Prioste</h1>
+            <h2>Scrum Master | Analista de Trasnformação Digital</h2>
+            <p>Analista de Transformação Digital. Graduado em Sistemas de Informação. Responsável por acelerar a Transformação Digital na área de Regulatory Science de uma empresa multinacional, promovendo a mudança de mindset através da facilitação de workshops de inovação, exploração e viabilização de novas tecnologias, otimização de processos e implementação de metodologias ágeis.</p>
+        </div>
+
+        <div id="links-footer" class="links">
+            <a href="https://github.com/ianprioste" target="_blank">Github</a>
+            <a href="https://www.linkedin.com/in/ianprioste/" target="_blank">Linkedin</a>        
+        
+        </div>
+
         
         
     </body>
