@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+    --color-main-pink:#FBDFDB;
+    --color-main-gray:#777777;
+}
+
+*{  
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 20px 0;
+}
+
+header{
+    max-width: 940px;
+    margin-bottom: 30px;
+
+    display: grid;
+    grid-template-columns: max-content auto auto;
+
+    position: relative;
+}
+
+header .logo img{
+    position: absolute;
+    left: 0;   
+}
+
+header .menu{
+    width: 150px;
+}
+
+header .menu a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: black;
+    margin-right: 20px;
+}
+
+.banner{
+    width: 940px;
+    height: 366px;
+
+    border-radius: 30px;
+
+    background-color:var(--color-main-pink);
+
+    display: flex;
+    align-content: space-between;
+
+    position: relative;
+}
+
+.banner-text{
+    max-width: 316px;
+    margin: 117px 0 0 60px;
+}
+
+.banner-text h1{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+
+    margin-bottom: 10px;
+}
+
+.banner-text p{
+    font-size: 18px;
+    font-weight:400;
+    opacity: 0.7;
+    line-height: 28px;
+}
+
+.banner-img{
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+
+.box {
+    width: 940px;
+    margin: 4.5% auto;
+}
+
+.cards {
+    max-width: 940px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.4%;
+
+}
+
+.card{
+    margin-top: 2.7%;
+    cursor: pointer;
+}
+
+.card img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 1.8%;
+}
+
+.card p{
+    font-size: 14px;
+    color: var(--color-main-gray);
+    margin-top: 0.5%;
+}
+
+footer{
+    background-color: #eeeeee;
+    margin-bottom: 0; 
+    position: absolute; 
+    width: 100%;
+    text-align: center;
+}
+
+footer p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #999999;
+    padding: 1.3% 0;
+}
+
+/*==== SOBRE ====*/
+
+.about{
+    width: 940px;
+    margin: 4.6% auto;
+}
+
+.about h1{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.about h2{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-top: 2.7%;
+}
+
+
+.about p{
+    font-size: 18px;
+    font-weight:400;
+    line-height: 28px;
+    color: var(--color-main-gray);
+
+    margin-top: 1.8%;
+}
+
+/*==== MODAL ====*/
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.6);
+
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+
+    visibility: hidden;
+
+}
+
+
+
+.dialog{
+    background-color: white;
+
+    width: 660px;
+    height: 413px;
+    border-radius: 16px;
+    margin: 20vh auto; /*vh = visão da altura*/
+
+
+
+}
+
+.dialog .image{
+
+    width: 600px;
+    height: 200px;
+   
+    overflow:hidden;
+    position: relative;
+
+    border-radius: 15px;
+
+    margin: 30px;
+}
+
+.dialog .image img{
+    border-radius: 15px;
+
+    position: absolute;
+    top: 30px;
+
+}
+
+.dialog h1{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: center;
+    
+}
+
+.dialog h2{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    color: #777777;
+    margin-top: 0.4%;
+}
+
+.dialog p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    color: #999999;
+    margin-top: 11.9%;
+
+    cursor: pointer;
+
+}
+
+/*=== MODAL ATIVO === */
+.modal.active{
+    visibility: visible;
+}
