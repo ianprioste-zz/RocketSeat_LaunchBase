@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block head %} 
+
+    <title>Portfolio Ian Prioste</title>    
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel ="stylesheet">
+
+
+        
+{% endblock %}
+
+
+{% block content %}
+    <div id="wrapper">
+        <h1>Aulas</h1>
+    </div>
+    
+    <section class="cards"> <!--Criado apenas para ser semântico-->
+        
+    <div class="card" id="jU9br5C-wqI">
+        <div class="card_image-container">
+            <img src="https://img.youtube.com/vi/jU9br5C/default.jpg" alt="">
+        </div>
+        <div class="card_content">
+            <p>The Difference Between Digitization, Digitalization, and Digital Transformation</p>
+        </div>
+        <div class="card_info">
+            <p>24 min</p>
+            <p class="card_price">Free</p>
+        </div>
+    </div>
+
+    <div class="card" id="KvZRRIRcbHY">
+        <div class="card_image-container">
+            <img src="https://img.youtube.com/vi/KvZRRIRcbHY/default.jpg" alt="">
+        </div>
+        <div class="card_content">
+            <p>Digital Transformation Vision 2020</p>
+        </div>
+        <div class="card_info">
+            <p>24 min</p>
+            <p class="card_price">Free</p>
+        </div>
+    </div>
+
+    <div class="card" id="HRvkbpbUM2M">
+        <div class="card_image-container">
+            <img src="https://img.youtube.com/vi/HRvkbpbUM2M/default.jpg">
+        </div>
+        <div class="card_content">
+            <p>Pessoa, tecnologia e negócios: os 3 pilares da Transformação Digital no Marketing</p>
+        </div>
+        <div class="card_info">
+            <p>24 min</p>
+            <p class="card_price">Free</p>
+        </div>
+    </div>
+
+    </section>
+
+
+    
+    <div class="modal-overlay">
+        <div class="modal">
+            <a class="close-modal">
+                <i class="material-icons">close</i>
+            </a>
+
+            <div class="modal-content">
+                <iframe src="" frameborder="0"></iframe>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+{% endblock %}

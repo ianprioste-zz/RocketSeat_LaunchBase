@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+
+       
+
+        {% block head %} 
+            <title>Ian Prioste</title>
+        {% endblock %}
+
+        <link rel="stylesheet" href="/styles.css">
+
+    </head>
+
+    <body> 
+        <header> <!--Parte inicial da página-->
+            <div class="links"> <!--Caixinha que agrupa elementos-->
+                <a href="/">Sobre</a>
+                <a href="/portfolio">Portfolio</a>        
+            </div>
+        </header>
+
+        {% block content %} <!--Abrir bloco de nome 'content'-->
+
+        {% endblock %} <!--Fechar bloco-->
+
+        
+        
+    </body>
+
+
+
+</html>

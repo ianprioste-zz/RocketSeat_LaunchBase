@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/rocketseat-education/bootcamp-launchbase-desafios-02/master/desafios/favicon.ico" type="image/x-icon" />
+
+    {% block head%}
+
+        <title>Landie</title>
+
+    {% endblock%}
+ 
+
+</head>
+
+<body>
+    <header>
+        <div class="menu">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contents">Contents</a>
+        </div>
+        
+        <div class="logo">
+            <h1>Landie</h1>
+        </div>
+
+        <div class="redes-sociais">
+            <a href=""><img src="/images/instagram.svg" alt=""></a>
+            <a href=""><img src="/images/linkedin.svg" alt=""></a>
+
+        </div>
+    </header>
+
+    {% block content%}
+
+    {% endblock%}
+    
+</body>
+
+
+</html>
