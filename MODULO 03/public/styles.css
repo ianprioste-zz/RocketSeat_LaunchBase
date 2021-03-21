@@ -94,10 +94,24 @@ header{
 
 .card{
     background-color: var(--color-rocket) ;
+    display: grid;
+    cursor: pointer;
+}
+
+.card_image-container {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+
 }
 
 .card_image-container img {
     width: 100%;
+    margin-top: -30px;
+}
+
+.card_content{
+    min-height: 60px;
 }
 
 .card_content,
@@ -108,6 +122,7 @@ header{
 .card_info{
     display: grid;
     grid-template-columns: 1fr 1fr; /* Duas colunas em frações para ter tamanho flexível*/
+    align-items: center;
 }
 
 .card_price{
@@ -162,5 +177,5 @@ iframe{
     width: 100%;
     height: 90%;
     position: absolute; /*Preencher todo o espaço*/
-    top: 5%;
+    bottom: 0;
 }
