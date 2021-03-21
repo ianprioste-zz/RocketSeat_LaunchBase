@@ -148,6 +148,8 @@ html.contents{
     border-radius: 20px;
     margin: 20px;
 
+    display: grid;
+
 }
 
 .card_img{
@@ -175,7 +177,6 @@ html.contents{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-
 }
 
 .card_time{

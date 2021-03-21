@@ -13,44 +13,21 @@
 {% block content%}
 
     <section class="cards">
-        <div class="card" id="gyGsPlt06bo">
-            <div class="card_img">
-                <img src="https://img.youtube.com/vi/gyGsPlt06bo/0.jpg" alt="">
-            </div>
-            <div class="card_content">
-                <p>Web Design Trends 2021</p>
-            </div>
-            <div class="card_info">
-                <p>Envato</p>
-                <p class="card_time">13:36</p>
-            </div>   
-        </div>
 
-        <div class="card" id="IbOyBIS57C0">
-            <div class="card_img">
-                <img src="https://img.youtube.com/vi/IbOyBIS57C0/0.jpg" alt="">
+        {% for item in items %}
+            <div class="card" id="{{item.id}}">
+                <div class="card_img">
+                    <img src="https://img.youtube.com/vi/{{item.id}}/0.jpg" alt="">
+                </div>
+                <div class="card_content">
+                    <p>{{item.title}}</p>
+                </div>
+                <div class="card_info">
+                    <p>{{item.channel}}</p>
+                    <p class="card_time">{{item.time}}</p>
+                </div>   
             </div>
-            <div class="card_content">
-                <p>Professional Web Design Process Explained in 5 minutes</p>
-            </div>
-            <div class="card_info">
-                <p>Flux</p>
-                <p class="card_time">5:54</p>
-            </div>   
-        </div>
-
-        <div class="card" id="iF66er2oHBo">
-            <div class="card_img">
-                <img src="https://img.youtube.com/vi/iF66er2oHBo/0.jpg" alt="">
-            </div>
-            <div class="card_content">
-                <p>Como começar a trabalhar com web design</p>
-            </div>
-            <div class="card_info">
-                <p>Clube do Design</p>
-                <p class="card_time">6:48</p>
-            </div>   
-        </div>
+        {%endfor%}
     </section>
 
     <div class="modal-overlay">
