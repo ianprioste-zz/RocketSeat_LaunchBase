@@ -6,11 +6,10 @@ const iframe = modalOverlay.querySelector("iframe") //procurar dentro do modalOv
 
 for (let card of cards){ //para cada cartão em cards
     card.addEventListener ('click',function(){ //função que ouve eventos e executa uma ação que é a função function
-        modalOverlay.classList.add('active') //função para adicionar uma classe
 
+        const videoId = card.getAttribute("id")
+        window.location.href = `/video?id=${videoId}`
 
-        const videoId = card.getAttribute("id") // pegar o atributo do id
-        iframe.src = `https://www.youtube.com/embed/${videoId}` //mudar src do iframe de acordo com a variável que receber do card
     })  
 }
 

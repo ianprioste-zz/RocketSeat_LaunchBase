@@ -22,9 +22,15 @@
         {% for item in items %}
 
             <div class="card" id="{{item.id}}">
-                <div class="card_image-container">
-                    <img src="https://img.youtube.com/vi/{{item.id}}/0.jpg" alt="Imagem de {{item.title}}">
+                <div class="card_container {{'featured-wrapper' if item.featured}}">
+                    <div class="card_container_image">
+                        <img src="https://img.youtube.com/vi/{{item.id}}/0.jpg" alt="Imagem de {{item.title}}">
+                    </div>
+                    {% if item.featured %}
+                        <div class="featured">Featured</div>
+                    {% endif %}
                 </div>
+                
                 <div class="card_content">
                     <p>{{item.title}}</p>
                 </div>
@@ -37,20 +43,7 @@
         {% endfor %}
     
     </section>
-    
-    <div class="modal-overlay">
-        <div class="modal">
-            <a class="close-modal">
-                <i class="material-icons">close</i>
-            </a>
 
-            <div class="modal-content">
-                <iframe src="" frameborder="0"></iframe>
-            </div>
-
-        </div>
-    </div>
-
-    <script src="scripts.js"></script>
+    <script src="/scripts.js"></script>
 
 {% endblock %}

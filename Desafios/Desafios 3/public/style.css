@@ -236,3 +236,29 @@ iframe{
     position: absolute;
     top: 8%;
 }
+
+/*==== PAGE VIDEO ==== */
+
+.video {
+
+    max-width: 800px;
+    margin: 20px auto 0;
+
+    background-color: rgba(0,0,0, 0.1);
+    border-radius: 20px;
+
+    padding: 0.01%;
+
+
+}
+
+.video .card_img{
+    position: relative;
+    height: 450px;
+    padding-top: 10% ;
+}
+
+.video iframe{
+    width: 100%;
+    position: absolute;
+}
