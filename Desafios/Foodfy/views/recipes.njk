@@ -1,0 +1,71 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+
+    <div class="box">
+        <div class="cards">
+            {% for recipe in recipes %}
+                <div class="card" id="{{loop.index0}}">
+                    <div class="card-img">
+                        <img src="{{recipe.image}}" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>{{recipe.title}}</h2>
+                        <p>por {{recipe.author}}</p>
+                        
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <section class="detail hidden">
+
+        <div class="card-img">
+            <img src="{{recipe.image}}" alt="">
+        </div>
+
+        <div class="info">
+            <h1>{{recipe.title}}</h1>
+            <h2>por {{recipe.author}}</h2>    
+        </div>
+
+        <div class="ingredients">
+            <div class="title">
+                <h3>Ingredientes</h3>
+                <a class="showHide" id="ingredient"> OCULTAR </a>
+            </div>
+            <div class="itens" id="ingredient">
+                {% for ingredient in recipe.ingredients %}
+                    <li>{{ ingredient }}</li>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="preparation">
+            <div class="title">
+                <h3>Modo de Preparo</h3>
+                <a class="showHide" id="preparation"> OCULTAR </a>
+            </div>
+            <div class="itens" id="preparation">
+                {% for preparation in recipe.preparation%}
+                <li>{{preparation}}</lil>
+                {%endfor%}
+            </div>
+        </div>
+
+        <div class="information" >
+            <div class="title">
+                <h3>Informações Adicionais</h3>
+                <a class="showHide" id="information"> OCULTAR </a>
+            </div>
+            <div class="itens" id="information">
+                <p>{{recipe.information}}</p>
+            </div>
+        </div>
+
+    </section>
+
+
+{% endblock content %}

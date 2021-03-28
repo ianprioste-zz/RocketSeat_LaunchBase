@@ -1,0 +1,35 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <div class="banner">
+        <div class="banner-text">
+            <h1>As melhores receitas</h1>
+            <p>Aprenda a contruir os melhores pratos com receitas criadas pro profissionais do mundo inteiro</p>
+        </div>
+        <div class="banner-img">
+            <img src="assets/chef.png" alt="">
+        </div>
+    </div>
+    
+    <div class="box">
+        <h1>Mais acessadas</h1>
+
+        <div class="cards">
+            {% for recipe in recipes %}
+                <div class="card" id="{{loop.index0}}">
+                    <div class="card-img">
+                        <img src="{{recipe.image}}" alt="">
+                    </div>
+                    <div class="info">
+                        <h2>{{recipe.title}}</h2>
+                        <p>por {{recipe.author}} - {{loop.index}}</p>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+ 
+    </div>
+
+{% endblock content %}
