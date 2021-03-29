@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --color-yellow: #f1bb51;
+    --color-purple: #43256f;
+    --color-purple2:#b08ee1;
+    --color-textbuttom: #3c2e51 !important;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body{
+    background: var(--color-purple);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}    
+
+header{
+    background: rgba(0, 0, 0, 0.274);
+    padding: 32px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.links a+a{
+    margin-left: 32px;
+}
+
+.links a{ 
+    color: white;
+    font-size: 18px; /*tamanho do texto, por padrão usa px*/
+    line-height: 28px; /*altura do texto (conselho usar 10 a mais que o font size)*/
+    text-decoration: none; /*Remover underline*/
+
+    position: relative;
+}
+
+.links a.active{
+    font-weight: bold;
+    color: var(--color-yellow);
+}
+
+.links a:hover{
+    color: var(--color-yellow);
+    transition: color 200ms;
+}
+
+.links a:hover::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-yellow);
+    position: absolute;
+    left:0;
+    bottom: -5px;
+}
+
+/* CARD */
+.card{
+    background-color: white;
+    width: 800px;
+    min-height: 400px;
+
+    margin: 45px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.6);
+
+    /* Animation */
+
+    opacity: 0;
+    animation: up 700ms ease-in-out 2s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+/*Details*/
+
+.details{
+    padding: 34px;
+    width: 40%;
+}
+
+.details .item {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 16px 0;
+}
+
+.details .item:last-child{
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1){
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2){
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-textbuttom);
+}
+
+.details .item span{
+    padding: 8px 16px;
+    background-color: var(--color-yellow);
+    border-radius: 16px;
+    color: var(--color-textbuttom);
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block; /*para aceitar o margin-top*/
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
